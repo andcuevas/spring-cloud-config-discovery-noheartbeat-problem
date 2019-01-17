@@ -1,0 +1,17 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    consul:
+      discovery:
+        service-name: ${spring.application.name}
+        instance-id: ${spring.application.name}:${instance-id:${random.value}}:${PID}
+---
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: /tmp/git-config/
