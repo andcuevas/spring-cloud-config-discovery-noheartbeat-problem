@@ -1,8 +1,8 @@
-##Description
+## Description
 
 Three different projects in order to reproduce a problem with Spring Cloud HeartbeatEvent when Spring Cloud Config Discovery is enabled.
 
-##Requirements
+## Requirements
 Download Consul client from https://www.consul.io/downloads.html
 
 For the Config Server:
@@ -21,17 +21,17 @@ For the Config Server:
 
 `$ git commit -m "Initial Commit"`
 
-##Running Consul as dev
+## Running Consul as dev
 `$ cd CONSUL_DIR`
 
 `$ ./consul agent -dev`
 
-#Running the app
+## Running the app
 1. First run the Application class of the config-server.
 1. Run the Application class of the spring-cloud-config-discovery-noheartbeat
 1. Run the Application class of the spring-cloud-config-heartbeat
 
-##Expected Results
+## Expected Results
 In the spring-cloud-config-heartbeat application, an entry in the log will appear:
 
 `2019-01-17 11:52:37.756  INFO 21490 --- [TaskScheduler-1] com.example.demo.HearbeatEventListener   : HeartbeatEvent:560`
